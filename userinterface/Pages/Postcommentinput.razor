@@ -1,0 +1,90 @@
+﻿@page "/Postcommentinput"
+@inject NavigationManager nm
+
+<PageTitle>Index</PageTitle>
+
+<div style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f5f5f5; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <h3 style="color: #333; margin-bottom: 20px;">POST COMMENTS</h3>
+    <EditForm Model="modalobj" OnSubmit="savestudent">
+        <div style="margin-bottom: 15px;">
+            <input type="text" placeholder="Enter your name" @bind="modalobj.firstname" class="form-control" />
+        </div>
+        <div style="margin-bottom: 15px;">
+            <input type="text" placeholder="Add your Comment" @bind="modalobj.email" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary" disabled="@isFirstCommentSubmitted">POST</button>
+    </EditForm>
+
+    <div style="margin-top: 15px;">
+        <!-- Button to view comments -->
+        <button type="button" class="btn btn-success mr-2" @onclick="ViewComments">View Comments</button>
+        <!-- Button to navigate back to the dashboard -->
+        <button type="button" class="btn btn-warning mr-2" @onclick="NavigateToDashboard">Dashboard</button>
+        <!-- Button to add a new comment -->
+        <button type="button" class="btn btn-danger" @onclick="AddNewComment" disabled="@isNewCommentButtonDisabled">Add New Comment</button>
+    </div>
+
+    <!-- Success and fill fields messages -->
+    @if (showFillFieldsMessage)
+    {
+        <p style="color: red; margin-top: 10px;">Please fill in all fields.</p>
+    }
+    @if (showSuccessMessage)
+    {
+        <p style="color: green; margin-top: 10px;">Comment added successfully!</p>
+    }
+</div>
+
+@code {
+    Modalstudent modalobj { get; set; } = new Modalstudent();
+    bool isFirstCommentSubmitted = false;
+    bool showFillFieldsMessage = false;
+    bool showSuccessMessage = false;
+    bool isNewCommentButtonEnabled = false;
+
+    private void savestudent()
+    {
+        if (!string.IsNullOrEmpty(modalobj.firstname) && !string.IsNullOrEmpty(modalobj.email))
+        {
+            Dataaccess.savebloginformation(modalobj);
+            if (!isFirstCommentSubmitted)
+            {
+                isFirstCommentSubmitted = true; // Set flag to true after submitting the first comment
+                isNewCommentButtonEnabled = true; // Enable "Add New Comment" button after the first comment
+            }
+            showSuccessMessage = true; // Show success message
+            showFillFieldsMessage = false; // Hide fill fields message
+
+            // Reset the form by creating a new instance of Modalstudent
+            modalobj = new Modalstudent();
+        }
+        else
+        {
+            showFillFieldsMessage = true; // Show fill fields message
+            showSuccessMessage = false; // Hide success message
+        }
+    }
+
+    // Method to navigate to the view comments page
+    private void ViewComments()
+    {
+        nm.NavigateTo("View_Comments");
+    }
+
+    // Method to navigate back to the dashboard
+    private void NavigateToDashboard()
+    {
+        nm.NavigateTo("/dashboard");
+    }
+
+    // Method to add a new comment
+    private void AddNewComment()
+    {
+        // This method can be used for additional functionality related to adding a new comment
+        // For example, resetting the form
+        modalobj = new Modalstudent();
+    }
+
+    // Computed property to determine whether the "Add New Comment" button should be disabled
+    private bool isNewCommentButtonDisabled => !isNewCommentButtonEnabled;
+}

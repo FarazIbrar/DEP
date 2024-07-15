@@ -1,0 +1,57 @@
+﻿@page "/View_Comments"
+@inject NavigationManager nm
+
+<PageTitle>View Comments</PageTitle>
+
+<div style="max-width: 800px; margin: 20px auto; padding: 20px; background-color: #f8f9fa; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <h3 style="color: #343a40; text-align: center; margin-bottom: 20px;">View Comments</h3>
+
+    <table style="width: 100%; margin-bottom: 1rem; color: #212529; border-collapse: collapse;">
+        <thead style="background-color: #343a40; color: white;">
+            <tr>
+                <th style="padding: 1rem; border: 1px solid #dee2e6;">Student ID</th>
+                <th style="padding: 1rem; border: 1px solid #dee2e6;">First Name</th>
+                <th style="padding: 1rem; border: 1px solid #dee2e6;">COMMENTS</th>
+                <th style="padding: 1rem; border: 1px solid #dee2e6;">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in liststudents)
+            {
+                <tr>
+                    <td style="padding: 1rem; border: 1px solid #dee2e6;">@item.stuid</td>
+                    <td style="padding: 1rem; border: 1px solid #dee2e6;">@item.firstname</td>
+                    <td style="padding: 1rem; border: 1px solid #dee2e6;">@item.email</td>
+                    <td style="padding: 1rem; border: 1px solid #dee2e6;">
+                 
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <!-- Button to return to the dashboard -->
+    <button type="button" class="btn btn-primary" @onclick="ReturnToDashboard">Dashboard</button>
+</div>
+
+@code {
+    List<Modalstudent> liststudents { get; set; } = new List<Modalstudent>();
+
+    protected override void OnInitialized()
+    {
+        liststudents = Dataaccess.getlogininformation();
+        base.OnInitialized();
+    }
+
+    // Method to navigate back to the dashboard
+    private void ReturnToDashboard()
+    {
+        nm.NavigateTo("/dashboard");
+    }
+
+    // Method to delete a comment
+  
+ 
+
+}
+

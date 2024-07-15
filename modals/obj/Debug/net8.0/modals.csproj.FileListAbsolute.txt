@@ -1,0 +1,48 @@
+C:\Users\User\Desktop\blog dataaccess\modals\bin\Debug\net8.0\Modals.deps.json
+C:\Users\User\Desktop\blog dataaccess\modals\bin\Debug\net8.0\Modals.dll
+C:\Users\User\Desktop\blog dataaccess\modals\bin\Debug\net8.0\Modals.pdb
+C:\Users\User\Desktop\blog dataaccess\modals\obj\Debug\net8.0\Modals.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\blog dataaccess\modals\obj\Debug\net8.0\Modals.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\blog dataaccess\modals\obj\Debug\net8.0\Modals.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\blog dataaccess\modals\obj\Debug\net8.0\Modals.AssemblyInfo.cs
+C:\Users\User\Desktop\blog dataaccess\modals\obj\Debug\net8.0\Modals.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\blog dataaccess\modals\obj\Debug\net8.0\Modals.dll
+C:\Users\User\Desktop\blog dataaccess\modals\obj\Debug\net8.0\refint\Modals.dll
+C:\Users\User\Desktop\blog dataaccess\modals\obj\Debug\net8.0\Modals.pdb
+C:\Users\User\Desktop\blog dataaccess\modals\obj\Debug\net8.0\ref\Modals.dll
+E:\setups\final project\blog dataaccess\modals\bin\Debug\net8.0\Modals.deps.json
+E:\setups\final project\blog dataaccess\modals\bin\Debug\net8.0\Modals.dll
+E:\setups\final project\blog dataaccess\modals\bin\Debug\net8.0\Modals.pdb
+E:\setups\final project\blog dataaccess\modals\obj\Debug\net8.0\Modals.csproj.AssemblyReference.cache
+E:\setups\final project\blog dataaccess\modals\obj\Debug\net8.0\Modals.GeneratedMSBuildEditorConfig.editorconfig
+E:\setups\final project\blog dataaccess\modals\obj\Debug\net8.0\Modals.AssemblyInfoInputs.cache
+E:\setups\final project\blog dataaccess\modals\obj\Debug\net8.0\Modals.AssemblyInfo.cs
+E:\setups\final project\blog dataaccess\modals\obj\Debug\net8.0\Modals.csproj.CoreCompileInputs.cache
+E:\setups\final project\blog dataaccess\modals\obj\Debug\net8.0\Modals.dll
+E:\setups\final project\blog dataaccess\modals\obj\Debug\net8.0\refint\Modals.dll
+E:\setups\final project\blog dataaccess\modals\obj\Debug\net8.0\Modals.pdb
+E:\setups\final project\blog dataaccess\modals\obj\Debug\net8.0\ref\Modals.dll
+E:\setups\final project - Copy\blog dataaccess\modals\bin\Debug\net8.0\Modals.deps.json
+E:\setups\final project - Copy\blog dataaccess\modals\bin\Debug\net8.0\Modals.dll
+E:\setups\final project - Copy\blog dataaccess\modals\bin\Debug\net8.0\Modals.pdb
+E:\setups\final project - Copy\blog dataaccess\modals\obj\Debug\net8.0\Modals.csproj.AssemblyReference.cache
+E:\setups\final project - Copy\blog dataaccess\modals\obj\Debug\net8.0\Modals.GeneratedMSBuildEditorConfig.editorconfig
+E:\setups\final project - Copy\blog dataaccess\modals\obj\Debug\net8.0\Modals.AssemblyInfoInputs.cache
+E:\setups\final project - Copy\blog dataaccess\modals\obj\Debug\net8.0\Modals.AssemblyInfo.cs
+E:\setups\final project - Copy\blog dataaccess\modals\obj\Debug\net8.0\Modals.csproj.CoreCompileInputs.cache
+E:\setups\final project - Copy\blog dataaccess\modals\obj\Debug\net8.0\Modals.dll
+E:\setups\final project - Copy\blog dataaccess\modals\obj\Debug\net8.0\refint\Modals.dll
+E:\setups\final project - Copy\blog dataaccess\modals\obj\Debug\net8.0\Modals.pdb
+E:\setups\final project - Copy\blog dataaccess\modals\obj\Debug\net8.0\ref\Modals.dll
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\modals\bin\Debug\net8.0\Modals.deps.json
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\modals\bin\Debug\net8.0\Modals.dll
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\modals\bin\Debug\net8.0\Modals.pdb
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\modals\obj\Debug\net8.0\Modals.csproj.AssemblyReference.cache
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\modals\obj\Debug\net8.0\Modals.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\modals\obj\Debug\net8.0\Modals.AssemblyInfoInputs.cache
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\modals\obj\Debug\net8.0\Modals.AssemblyInfo.cs
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\modals\obj\Debug\net8.0\Modals.csproj.CoreCompileInputs.cache
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\modals\obj\Debug\net8.0\Modals.dll
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\modals\obj\Debug\net8.0\refint\Modals.dll
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\modals\obj\Debug\net8.0\Modals.pdb
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\modals\obj\Debug\net8.0\ref\Modals.dll

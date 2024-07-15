@@ -1,0 +1,82 @@
+﻿@page "/index"
+@inject NavigationManager nm
+
+<PageTitle>Index</PageTitle>
+
+<div style="max-width: 600px; margin: 20px auto; padding: 20px; background-color: #f8f9fa; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <h3 style="color: #343a40; text-align: center; margin-bottom: 20px;">BLOG INFORMATION </h3>
+
+    <p style="text-align: center; color: #28a745; margin-bottom: 10px;" hidden="@(!showSuccessMessage)">Post added successfully!</p>
+    <p style="text-align: center; color: #dc3545; margin-bottom: 10px;" hidden="@(!showFillFieldsMessage)">Please fill in all fields.</p>
+
+    <EditForm Model="addpostobj" OnValidSubmit="saveblogdata">
+        <DataAnnotationsValidator />
+
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; color: #333;">Blog Title</label>
+            <InputText type="text" placeholder="Enter your blog title" @bind-Value="addpostobj.Title" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 3px; font-size: 16px;" />
+            <ValidationMessage For="@(() => addpostobj.Title)" />
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; color: #333;">Category</label>
+            <InputText type="text" placeholder="Enter your category" @bind-Value="addpostobj.Category" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 3px; font-size: 16px;" />
+            <ValidationMessage For="@(() => addpostobj.Category)" />
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; color: #333;">Content</label>
+            <InputTextArea placeholder="Enter your content" @bind-Value="addpostobj.Content" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 3px; font-size: 16px; height: 150px;"></InputTextArea>
+            <ValidationMessage For="@(() => addpostobj.Content)" />
+        </div>
+        <button type="submit" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: #fff; border: none; border-radius: 3px; font-size: 16px; cursor: pointer;">Save Blog Post</button>
+        <button type="button" class="btn btn-primary" @onclick="AddNewPost">Add Another Post</button>
+        <!-- Button to navigate to the dashboard -->
+        <button type="button" class="btn btn-success" @onclick="NavigateToDashboard">Dashboard</button>
+    </EditForm>
+
+    <div style="margin-top: 20px; text-align: center;">
+        <button class="btn btn-secondary" @onclick="NavigateToViewPosts" disabled="@(!atLeastOnePostAdded)">View Posts</button>
+    </div>
+</div>
+
+@code {
+    Addpost addpostobj { get; set; } = new Addpost();
+    bool atLeastOnePostAdded = false;
+    bool showFillFieldsMessage = false;
+    bool showSuccessMessage = false;
+
+    private async Task saveblogdata()
+    {
+        // Check if the form is valid
+        if (!string.IsNullOrEmpty(addpostobj.Title) && !string.IsNullOrEmpty(addpostobj.Category) && !string.IsNullOrEmpty(addpostobj.Content))
+        {
+            Dataaccess.saveblogAddpost(addpostobj);
+            atLeastOnePostAdded = true;
+            showFillFieldsMessage = false; // Hide the message
+            showSuccessMessage = true; // Show success message
+        }
+        else
+        {
+            // If any field is empty, show the message
+            showFillFieldsMessage = true;
+            showSuccessMessage = false; // Hide success message
+        }
+    }
+
+    private void AddNewPost()
+    {
+        addpostobj = new Addpost();
+        showFillFieldsMessage = false; // Hide the message
+        showSuccessMessage = false; // Hide success message
+    }
+
+    private void NavigateToViewPosts()
+    {
+        nm.NavigateTo("Viewpost");
+    }
+
+    // Method to navigate to the dashboard
+    private void NavigateToDashboard()
+    {
+        nm.NavigateTo("/dashboard");
+    }
+}

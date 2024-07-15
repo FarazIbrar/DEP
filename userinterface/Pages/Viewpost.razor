@@ -1,0 +1,54 @@
+﻿@page "/Viewpost"
+@inject NavigationManager navigationManager
+
+<PageTitle>View Blog Posts</PageTitle>
+
+<div style="max-width: 800px; margin: 20px auto; padding: 20px; background-color: #f8f9fa; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <h3 style="color: #343a40; text-align: center; margin-bottom: 20px;">BLOGS POSTED</h3>
+
+    <table style="width: 100%; margin-bottom: 1rem; color: #212529; border-collapse: collapse;">
+        <thead style="background-color: #343a40; color: white;">
+            <tr>
+                <th style="padding: 1rem; border: 1px solid #dee2e6;">Title</th>
+                <th style="padding: 1rem; border: 1px solid #dee2e6;">Category</th>
+                <th style="padding: 1rem; border: 1px solid #dee2e6;">Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var num in listBlogpost)
+            {
+                <tr>
+                    <td style="padding: 1rem; border: 1px solid #dee2e6;">@num.Title</td>
+                    <td style="padding: 1rem; border: 1px solid #dee2e6;">@num.Category</td>
+                    <td style="padding: 1rem; border: 1px solid #dee2e6;">@num.Content</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div style="text-align: center;">
+        <button type="button" class="btn btn-primary" @onclick="NavigateToManagePosts">Manage Posts</button>
+        <!-- Button to navigate to the dashboard -->
+        <button type="button" class="btn btn-success" @onclick="NavigateToDashboard">Dashboard</button>
+    </div>
+</div>
+
+@code {
+    List<Addpost> listBlogpost { get; set; } = new List<Addpost>();
+
+    protected override void OnInitialized()
+    {
+        listBlogpost = Dataaccess.getsaveblogininformation();
+        base.OnInitialized();
+    }
+    private void NavigateToManagePosts()
+    {
+        navigationManager.NavigateTo("/ManagePost");
+    }
+
+    // Method to navigate to the dashboard
+    private void NavigateToDashboard()
+    {
+        navigationManager.NavigateTo("/dashboard");
+    }
+}

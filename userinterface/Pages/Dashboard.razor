@@ -1,0 +1,124 @@
+﻿@page "/dashboard"
+@inject NavigationManager navigationManager
+
+@* Add variables to hold random insights *@
+@{
+    // Randomly generated insights
+    Random random = new Random();
+    int totalBlogs = random.Next(100, 500);
+    int totalPosts = random.Next(1000, 5000);
+    int totalComments=random.Next(1000, 5000);
+}
+
+<h1 class="text-center mt-4 display-4 text-white bg-primary py-2">Dashboard</h1>
+
+<hr class="my-4" />
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3">
+            <div class="list-group" style="background-color: #6A5ACD;">
+                <a href="/index" class="list-group-item list-group-item-action list-group-item-primary">Add Post</a>
+                <a href="/Viewpost" class="list-group-item list-group-item-action list-group-item-secondary">View Post</a>
+                <a href="/ManagePost" class="list-group-item list-group-item-action list-group-item-success">Manage Post</a>
+                <a href="/Postcommentinput" class="list-group-item list-group-item-action list-group-item-danger">Add Comment</a>
+                <a href="/View_Comments" class="list-group-item list-group-item-action list-group-item-warning">View Comment</a>
+                <a href="/" class="list-group-item list-group-item-action list-group-item-info">Logout</a>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="col-md-9">
+            <div class="card shadow mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">PROFILE</h5>
+                    <p class="card-text">Manage Blog Posts and Comments from here.</p>
+                </div>
+            </div>
+
+            <!-- Insights Section -->
+            <div class="card shadow mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">Insights</h5>
+                    <p class="card-text">Here are some insights about your blog:</p>
+                    <ul class="list-group">
+                        <li class="list-group-item">Total Blogs: <span class="badge badge-primary">@totalBlogs</span></li>
+                        <li class="list-group-item">Total Posts: <span class="badge badge-primary">@totalPosts</span></li>
+                        <li class="list-group-item">Total Comments: <span class="badge badge-primary">@totalComments</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Styles for the dashboard */
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #6A5ACD; /* Change the background color to purple */
+    }
+
+    h1 {
+        background-color: #007bff;
+        color: white;
+        padding: 20px 0;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        border: none;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+    }
+
+    .card-text {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .list-group-item {
+        border: none;
+        border-radius: 0;
+        font-size: 1rem;
+        margin-bottom: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+        .list-group-item:hover {
+            background-color: #f8f9fa;
+        }
+
+    .list-group-item-action:active {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .badge-primary {
+        background-color: #007bff;
+        color: white;
+        font-size: 1rem;
+    }
+
+    .container-fluid {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #6A5ACD; /* Change the background color of the container to purple */
+        border-radius: 10px; /* Add border-radius to give a rounded corner effect */
+    }
+</style>
+
+@code {
+    // Add methods for handling navigation and other functionality here
+}

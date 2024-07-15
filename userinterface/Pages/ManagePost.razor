@@ -1,0 +1,63 @@
+﻿@page "/ManagePost"
+
+@inject NavigationManager nm
+<h3 style="color: #343a40; text-align: center; margin-bottom: 20px;">Manage Post</h3>
+
+<div style="margin: 20px; padding: 20px; background-color: #f8f9fa; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <table style="width: 100%; margin-bottom: 1rem; color: #212529; border-collapse: collapse;">
+        <thead style="background-color: #343a40; color: white;">
+            <tr>
+                <th style="padding: 1rem; border: 1px solid #dee2e6;">Title</th>
+                <th style="padding: 1rem; border: 1px solid #dee2e6;">Category</th>
+                <th style="padding: 1rem; border: 1px solid #dee2e6;">Content</th>
+                <th style="padding: 1rem; border: 1px solid #dee2e6;">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var num in listBlogpost)
+            {
+                <tr>
+                    <td style="padding: 1rem; border: 1px solid #dee2e6;">@num.Title</td>
+                    <td style="padding: 1rem; border: 1px solid #dee2e6;">@num.Category</td>
+                    <td style="padding: 1rem; border: 1px solid #dee2e6;">@num.Content</td>
+                    <td style="padding: 1rem; border: 1px solid #dee2e6;">
+                        <button style="margin-right: 5px;" class="btn btn-danger btn-sm" @onclick="() => deletepost(num.Title)">Delete</button>
+                        <button class="btn btn-warning btn-sm">Edit</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    
+    <!-- Dashboard button -->
+    <div style="text-align: center;">
+        <button class="btn btn-secondary" @onclick="NavigateToDashboard">Dashboard</button>
+    </div>
+</div>
+
+@code {
+    List<Addpost> listBlogpost { get; set; } = new List<Addpost>();
+
+    protected override void OnInitialized()
+    {
+        Loaddata();
+        base.OnInitialized();
+    }
+
+    private void deletepost(string id)
+    {
+        Dataaccess.deletebloginformation(id);
+        Loaddata();
+    }
+
+    private void Loaddata()
+    {
+        listBlogpost = Dataaccess.getsaveblogininformation();
+    }
+
+    // Method to navigate back to the dashboard
+    private void NavigateToDashboard()
+    {
+        nm.NavigateTo("/dashboard");
+    }
+}

@@ -1,0 +1,60 @@
+C:\Users\User\Desktop\blog dataaccess\blog dataaccess\bin\Debug\net8.0\blogdataaccess.deps.json
+C:\Users\User\Desktop\blog dataaccess\blog dataaccess\bin\Debug\net8.0\blogdataaccess.dll
+C:\Users\User\Desktop\blog dataaccess\blog dataaccess\bin\Debug\net8.0\blogdataaccess.pdb
+C:\Users\User\Desktop\blog dataaccess\blog dataaccess\bin\Debug\net8.0\Modals.dll
+C:\Users\User\Desktop\blog dataaccess\blog dataaccess\bin\Debug\net8.0\Modals.pdb
+C:\Users\User\Desktop\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.AssemblyInfo.cs
+C:\Users\User\Desktop\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdata.FB186DC6.Up2Date
+C:\Users\User\Desktop\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.dll
+C:\Users\User\Desktop\blog dataaccess\blog dataaccess\obj\Debug\net8.0\refint\blogdataaccess.dll
+C:\Users\User\Desktop\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.pdb
+C:\Users\User\Desktop\blog dataaccess\blog dataaccess\obj\Debug\net8.0\ref\blogdataaccess.dll
+E:\setups\final project\blog dataaccess\blog dataaccess\bin\Debug\net8.0\blogdataaccess.deps.json
+E:\setups\final project\blog dataaccess\blog dataaccess\bin\Debug\net8.0\blogdataaccess.dll
+E:\setups\final project\blog dataaccess\blog dataaccess\bin\Debug\net8.0\blogdataaccess.pdb
+E:\setups\final project\blog dataaccess\blog dataaccess\bin\Debug\net8.0\Modals.dll
+E:\setups\final project\blog dataaccess\blog dataaccess\bin\Debug\net8.0\Modals.pdb
+E:\setups\final project\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.csproj.AssemblyReference.cache
+E:\setups\final project\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.GeneratedMSBuildEditorConfig.editorconfig
+E:\setups\final project\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.AssemblyInfoInputs.cache
+E:\setups\final project\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.AssemblyInfo.cs
+E:\setups\final project\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.csproj.CoreCompileInputs.cache
+E:\setups\final project\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdata.FB186DC6.Up2Date
+E:\setups\final project\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.dll
+E:\setups\final project\blog dataaccess\blog dataaccess\obj\Debug\net8.0\refint\blogdataaccess.dll
+E:\setups\final project\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.pdb
+E:\setups\final project\blog dataaccess\blog dataaccess\obj\Debug\net8.0\ref\blogdataaccess.dll
+E:\setups\final project - Copy\blog dataaccess\blog dataaccess\bin\Debug\net8.0\blogdataaccess.deps.json
+E:\setups\final project - Copy\blog dataaccess\blog dataaccess\bin\Debug\net8.0\blogdataaccess.dll
+E:\setups\final project - Copy\blog dataaccess\blog dataaccess\bin\Debug\net8.0\blogdataaccess.pdb
+E:\setups\final project - Copy\blog dataaccess\blog dataaccess\bin\Debug\net8.0\Modals.dll
+E:\setups\final project - Copy\blog dataaccess\blog dataaccess\bin\Debug\net8.0\Modals.pdb
+E:\setups\final project - Copy\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.csproj.AssemblyReference.cache
+E:\setups\final project - Copy\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.GeneratedMSBuildEditorConfig.editorconfig
+E:\setups\final project - Copy\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.AssemblyInfoInputs.cache
+E:\setups\final project - Copy\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.AssemblyInfo.cs
+E:\setups\final project - Copy\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.csproj.CoreCompileInputs.cache
+E:\setups\final project - Copy\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdata.FB186DC6.Up2Date
+E:\setups\final project - Copy\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.dll
+E:\setups\final project - Copy\blog dataaccess\blog dataaccess\obj\Debug\net8.0\refint\blogdataaccess.dll
+E:\setups\final project - Copy\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.pdb
+E:\setups\final project - Copy\blog dataaccess\blog dataaccess\obj\Debug\net8.0\ref\blogdataaccess.dll
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\blog dataaccess\bin\Debug\net8.0\blogdataaccess.deps.json
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\blog dataaccess\bin\Debug\net8.0\blogdataaccess.dll
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\blog dataaccess\bin\Debug\net8.0\blogdataaccess.pdb
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\blog dataaccess\bin\Debug\net8.0\Modals.dll
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\blog dataaccess\bin\Debug\net8.0\Modals.pdb
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.csproj.AssemblyReference.cache
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.AssemblyInfoInputs.cache
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.AssemblyInfo.cs
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.csproj.CoreCompileInputs.cache
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdata.FB186DC6.Up2Date
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.dll
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\blog dataaccess\obj\Debug\net8.0\refint\blogdataaccess.dll
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\blog dataaccess\obj\Debug\net8.0\blogdataaccess.pdb
+C:\Users\faraz\Downloads\blog dataaccess\blog dataaccess\blog dataaccess\obj\Debug\net8.0\ref\blogdataaccess.dll

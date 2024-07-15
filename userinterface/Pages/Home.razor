@@ -1,0 +1,537 @@
+﻿@page "/"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogger HUB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+ 
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary-color: #4891ff;
+            --light-color: #f4f4f6;
+            --dark-color: #111;
+        }
+
+        body {
+                 font-family: 'Poppins', sans-serif;
+                 font-size: 16px;
+                 line-height: 1.5;
+                 background: #4891ff; /* Change the background color to purple */
+                 overflow-x: hidden;
+             }
+
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #fff;
+            padding: 20px;
+        }
+
+            .navbar .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .navbar .main-menu ul {
+                display: flex;
+            }
+
+            .navbar ul li a {
+                padding: 10px 20px;
+                display: block;
+                font-weight: 600;
+                transition: 0.5s;
+            }
+
+                .navbar ul li a:hover {
+                    color: var(--primary-color);
+                }
+
+                .navbar ul li a i {
+                    margin-right: 10px;
+                }
+
+            .navbar ul li:last-child a {
+                margin-left: 10px;
+            }
+
+        /* Hero */
+        .hero {
+            margin-bottom: 50px;
+        }
+
+            .hero .container {
+                background: url('../images/hero-bg.png') no-repeat;
+                background-size: contain;
+                background-position: center bottom;
+                height: 550px;
+            }
+
+            .hero .hero-content {
+                width: 70%;
+            }
+
+            .hero .hero-text {
+                width: 70%;
+                margin-bottom: 20px;
+            }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 40px 0;
+        }
+
+            .testimonials .testimonials-heading {
+                width: 700px;
+                margin-bottom: 40px;
+            }
+
+            .testimonials .testimonials-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+
+            .testimonials .card p:nth-child(2) {
+                margin-top: 30px;
+                font-weight: bold;
+            }
+
+        /* Pricing */
+        .pricing .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .pricing .pricing-card-subheading {
+            margin-bottom: 30px;
+        }
+
+        .pricing .pricing-card-price {
+            margin-bottom: 30px;
+            padding: 20px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .pricing ul {
+            margin: 30px 0;
+        }
+
+            .pricing ul li {
+                margin-bottom: 20px;
+            }
+
+                .pricing ul li i {
+                    margin-right: 10px;
+                }
+
+        .pricing .pricing-footer {
+            margin: 30px 0;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 40px 0;
+        }
+
+            .faq .faq-group {
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 20px;
+            }
+
+                .faq .faq-group .faq-group-header {
+                    padding: 20px 0;
+                    margin-bottom: 15px;
+                    position: relative;
+                }
+
+                    .faq .faq-group .faq-group-header h4 {
+                        font-weight: 600;
+                        width: 95%;
+                    }
+
+                    .faq .faq-group .faq-group-header i {
+                        position: absolute;
+                        right: 0;
+                        top: 35px;
+                        font-size: 1.3rem;
+                        cursor: pointer;
+                    }
+
+                .faq .faq-group .faq-group-body {
+                    display: none;
+                }
+
+                    .faq .faq-group .faq-group-body.open {
+                        display: block;
+                    }
+
+            .faq ul.faq-menu {
+                max-width: 400px;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: #ddd;
+                padding: 10px 20px;
+                border-radius: 10px;
+                font-weight: 600;
+                cursor: pointer;
+            }
+
+                .faq ul.faq-menu li {
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    text-align: center;
+                }
+
+                    .faq ul.faq-menu li.active {
+                        background: var(--primary-color);
+                        color: #fff;
+                    }
+
+        /* Footer */
+        .footer {
+            padding: 40px 0;
+        }
+
+            .footer h4 {
+                margin-bottom: 10px;
+            }
+
+            .footer ul li {
+                line-height: 2.5;
+            }
+
+            .footer a {
+                color: #ccc;
+            }
+
+            .footer i {
+                font-size: 1.5rem;
+                margin-right: 10px;
+            }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer .card {
+            margin: 20px 30px 30px 0;
+        }
+
+        .footer input[type='email'] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .container-sm {
+            max-width: 800px;
+            margin: 0
+	    auto;
+            padding: 0 15px;
+        }
+
+        /* Card */
+        .card {
+            background: #fff;
+            color: #000;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 13px 20px;
+            background: var(--light-color);
+            color: #333;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: center;
+            transition: 0.5s;
+        }
+
+            .btn:hover {
+                opacity: 0.8;
+            }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        .btn-dark {
+            background: var(--dark-color);
+            color: #fff;
+        }
+
+        .btn-block {
+            display: block;
+            width: 100%;
+        }
+
+        /* Text Classes */
+        .text-xxl {
+            font-size: 3rem;
+            line-height: 1.2;
+            font-weight: 600;
+            margin: 40px 0 20px;
+        }
+
+        .text-xl {
+            font-size: 2.2rem;
+            line-height: 1.4;
+            font-weight: normal;
+            margin: 40px 0 20px;
+        }
+
+        .text-lg {
+            font-size: 1.8rem;
+            line-height: 1.4;
+            font-weight: normal;
+            margin: 30px 0 20px;
+        }
+
+        .text-md {
+            font-size: 1.2rem;
+            line-height: 1.4;
+            font-weight: normal;
+            margin: 20px 0 10px;
+        }
+
+        .text-sm {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            font-weight: normal;
+            margin: 10px 0;
+        }
+
+        .text-primary {
+            color: var(--primary-color);
+        }
+
+        .text-dark {
+            color: var(--dark-color);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .lead {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+
+        .my-2 {
+            margin: 20px 0;
+        }
+
+        .my-4 {
+            margin: 40px 0;
+        }
+
+        .my-6 {
+            margin: 60px 0;
+        }
+
+        .py-2 {
+            padding: 20px 0;
+        }
+
+        .py-4 {
+            padding: 40px 0;
+        }
+
+        .py-6 {
+            padding: 60px 0;
+        }
+    </style
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html">
+                <h2>BLOGGERS HUB</h2>
+            </a>
+            <div class="main-menu">
+                <ul>
+                  
+                    <li><a href="#pricing"><i class="fa-solid fa-tag"></i>PLANS</a></li>
+                    <li><a href="#faqs"><i class="fa-solid fa-circle-question"></i>FAQS</a></li>
+                    <li><a href="/Login" class="btn btn-primary">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="text-xxl">Transform Your Blogging Journey with BloggerHub</h1>
+                <p class="lead hero-text">
+                    Unlock Growth Potential
+                    Tap into the capabilities of our robust tools to propel your blogging endeavors to new heights. Start your journey towards success today!
+                </p>
+                <a href="/Login" class="btn btn-dark">Start Today</a>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="text-xl text-center testimonials-heading">What Our Readers Say</h2>
+            <div class="testimonials-grid">
+                <div class="card text-center">
+                    <p>"Blogger Hub has been my go-to source for blogging tips and inspiration. My blog's traffic has tripled!"</p>
+                    <p>Amir hamza, Food Blogger</p>
+                </div>
+                <div class="card text-center">
+                    <p>"The insights and tutorials on Blogger Hub are top-notch. I've learned so much and improved my writing skills significantly."</p>
+                    <p>Faraz ibrar, Travel Writer</p>
+                </div>
+                <div class="card text-center">
+                    <p>"Thanks to Blogger Hub, I connected with a community of passionate writers. It's the best resource for bloggers out there."</p>
+                    <p>Ahsan Abbas, Lifestyle Blogger</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="text-xl text-center">Choose Your Plan</h2>
+            <div class="pricing-grid">
+                <div class="card">
+                    <h3 class="text-lg text-primary pricing-card-subheading">Silver Plan</h3>
+                    <p class="pricing-card-price">$19/month</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i>Feature 1</li>
+                        <li><i class="fa-solid fa-check"></i>Feature 2</li>
+                        <li><i class="fa-solid fa-check"></i>Feature 3</li>
+                    </ul>
+                    <div class="pricing-footer">
+                        <a href="/Login" class="btn btn-dark btn-block">Join Now</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="text-lg text-primary pricing-card-subheading">Golden Plan</h3>
+                    <p class="pricing-card-price">$49/month</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i>Feature 1</li>
+                        <li><i class="fa-solid fa-check"></i>Feature 2</li>
+                        <li><i class="fa-solid fa-check"></i>Feature 3</li>
+                    </ul>
+                    <div class="pricing-footer">
+                        <a href="/Login" class="btn btn-dark btn-block">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faqs" class="faq">
+        <div class="container">
+            <h2 class="text-xl text-center">Frequently Asked Questions</h2>
+            <div class="faq-group">
+                <div class="faq-group-header">
+                    <h4>What topics do you cover?</h4>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-group-body">
+                    <p>We cover a wide range of topics, from technology and lifestyle to travel and food. Whatever interests you, we've got it covered!</p>
+                </div>
+            </div>
+            <div class="faq-group">
+                <div class="faq-group-header">
+                    <h4>Can I contribute as a guest writer?</h4>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-group-body">
+                    <p>Absolutely! We welcome guest contributions from passionate writers like you. Share your unique perspective with our audience and gain exposure for your work.</p>
+                </div>
+            </div>
+            <div class="faq-group">
+                <div class="faq-group-header">
+                    <h4>Is your content suitable for all ages?</h4>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-group-body">
+                    <p>Yes,our content is friendly and suitable for readers of all ages. Whether you're a teenager or a retiree, you'll find something engaging and informative here.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h1>BLoggers HUB</h1>
+                    <h3>Join thousands of satisfied customers today.</h3>
+                </div>
+           </div>
+        </div>
+    </footer>
+
+  
+</body>
+</html>
+
+@code {
+
+}
